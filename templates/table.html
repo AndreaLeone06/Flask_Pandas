@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Risultati ricerca regionale COVID-19</title>
+</head>
+<body>
+    <h1>Risultati ricerca regionale COVID-19</h1>
+    <div id="tabella">
+        <table>
+            <tbody>
+                {% set righe = tabella.split('</tr>') %}
+                {{ righe[0] }}</tr>
+                {{ righe[1] }}</tr>
+            </tbody>
+            {{tabella.split('</tbody>')[1]|safe}}
+        </table>
+    </div>
+</body>
+</html>

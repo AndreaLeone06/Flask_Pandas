@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ricerca regionale COVID-19</title>
+</head>
+<body>
+    <h1>Ricerca regionale COVID-19</h1>
+    <form action="/search" method="get">
+        <label for="regione">Seleziona la regione:</label>
+        <select id="regione" name="regione">
+            {% for regione in list %}
+            <option value="{{regione}}">{{regione}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Cerca">
+    </form>
+</body>
+</html>
